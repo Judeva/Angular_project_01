@@ -1,0 +1,27 @@
+.error-box {
+    padding: 25px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    border-radius: 7px;
+    width:auto;
+}
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+  .closebtn:hover {
+    color: black;
+}

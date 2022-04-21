@@ -1,0 +1,17 @@
+.about-container {
+    color: white;     
+}
+
+.about-container p{
+    width: 50%;
+    margin: auto;
+    text-align: justify;    
+}
+.about-container h4{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.about-container .navigation-container{
+padding:15%;
+}

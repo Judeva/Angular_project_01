@@ -1,0 +1,44 @@
+.create {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    align-content: center;
+    color: rgb(160, 160, 160);
+}
+
+.create h4 {
+    color: whitesmoke;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.create input{
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid wheat;
+    box-sizing: border-box;
+    display: block;
+    border-radius: 5px;
+    color: rgb(160, 160, 160) ;
+}
+.create button{
+
+    
+    background-color: rgba(255, 56, 99, 0);
+    color:white;
+   
+    
+}
+
+.form-input{
+    color: white;
+}
+.create img{
+   width: 400px;
+}
+.create textarea{
+    width: 400px;
+}
+
+

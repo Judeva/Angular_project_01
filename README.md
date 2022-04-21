@@ -1,7 +1,7 @@
 # Softuni-Angular-Project
 
 ## LOANS
-Space cat is a platform where users can upload and store photos and browse, rate photos from other users.
+Create, edit, track loans, due dates, user data. Login, Register, Customized views. 
 
 ## Technical Stack
 
