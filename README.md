@@ -27,13 +27,13 @@ Create, edit, track loans, due dates, user data. Login, Register, Customized vie
 
 # 
 
-- Navigate to client (react) folder
+- Navigate to client (angular) folder
 - cd client
 
 - Install all needed packages
 - npm install
 
 - And run the application
-- npm start
+- ng serve
 
 ###### The app will run on http://localhost:3000/4200
