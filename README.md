@@ -21,7 +21,7 @@ Create, edit, track loans, due dates, user data. Login, Register, Customized vie
 - npm install
 
 - Run the server
-- npm start
+- npm run start
 
 ###### The server will run on http://localhost:5000
 
