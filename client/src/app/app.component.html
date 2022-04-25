@@ -1,7 +1,12 @@
 <app-header></app-header>
 
-<app-sidebar></app-sidebar>
+<div id="layoutSidenav">
+    <div id="layoutSidenav_nav">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div id="layoutSidenav_content">
+        <app-footer></app-footer>
+    </div>
+</div>
 
 <router-outlet></router-outlet>
-
-<app-footer></app-footer>
