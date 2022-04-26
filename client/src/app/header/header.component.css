@@ -5,3 +5,7 @@
 .header-icon {
     margin-right: 10px;
 }
+
+.mat-toolbar.mat-primary {
+    background: #2551a1;
+}
