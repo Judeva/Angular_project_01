@@ -1,4 +1,9 @@
 <mat-selection-list [multiple]="false">
+
+    <mat-list-option>
+        <a routerLink="/dashboard">Dashboard</a>
+    </mat-list-option>
+
     <mat-list-option>
         <a routerLink="/customers">Customers</a>
     </mat-list-option>
@@ -16,10 +21,14 @@
     </mat-list-option>
 
     <mat-list-option>
-        <a routerLink="/audit">Activity log</a>
+        <a routerLink="/reports">Reports</a>
     </mat-list-option>
 
     <mat-list-option>
-        <a routerLink="/user/bob">Settings</a>
+        <a routerLink="/settings">Settings</a>
+    </mat-list-option>
+
+    <mat-list-option>
+        <a routerLink="/activity">Activity</a>
     </mat-list-option>
 </mat-selection-list>
