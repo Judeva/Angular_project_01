@@ -7,3 +7,7 @@ const customerSchema = mongoose.Schema({
     phoneNumber: String,
     dob: String
 })
+
+const customerModel = mongoose.model('Customer', customerSchema);
+
+module.exports = customerModel;
