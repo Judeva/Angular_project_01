@@ -13,8 +13,6 @@ var settingsRouter = require('./routes/settings');
 var auditRouter = require('./routes/audit');
 var loansRouter = require('./routes/loans');
 
-
-
 var app = express();
 
 // view engine setup
@@ -29,6 +27,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/loans', loansRouter);
+app.use('/customers', customersRouter);
+app.use('/invoices', invoicesRouter);
+app.use('/payments', paymentsRouter);
+app.use('/settings', settingsRouter);
+app.use('/audit', auditRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
