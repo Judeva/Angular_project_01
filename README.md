@@ -1,12 +1,11 @@
 # Softuni-Angular-Project
 
 ## LOANS
-Create, edit, track loans, due dates, user data. Login, Register, Customized views. 
+Create, edit, track loans, due dates, user data, payments. Login, Register, Customized views, Settings. 
 
 ## Technical Stack
 
 - MEAN (MongoDB, Express.js, Angular, Node.js)
-- Firebase Authentication
 - Connect an external API 
 - CSS Stylesheets
 - UI&UX
@@ -23,7 +22,7 @@ Create, edit, track loans, due dates, user data. Login, Register, Customized vie
 - Run the server
 - npm run start
 
-###### The server will run on http://localhost:5000
+###### The server will run on http://localhost:3000
 
 # 
 
@@ -36,4 +35,4 @@ Create, edit, track loans, due dates, user data. Login, Register, Customized vie
 - And run the application
 - ng serve
 
-###### The app will run on http://localhost:3000/4200
+###### The app will run on http://localhost:4200
