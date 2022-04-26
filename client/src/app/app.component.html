@@ -1,12 +1,7 @@
-<app-header></app-header>
-
-<div id="layoutSidenav">
-    <div id="layoutSidenav_nav">
-        <app-sidebar></app-sidebar>
-    </div>
-    <div id="layoutSidenav_content">
-        <app-footer></app-footer>
-    </div>
-</div>
-
-<router-outlet></router-outlet>
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>Drawer content</mat-drawer>
+    <mat-drawer-content>
+        <router-outlet>
+        </router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
