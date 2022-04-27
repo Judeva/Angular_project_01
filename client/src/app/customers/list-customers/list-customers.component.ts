@@ -1,94 +1,51 @@
-import { Component, OnInit } from '@angular/core';
-import { Event } from '@angular/router';
-import { Employee } from 'src/app/interface/Employee';
+import { SelectionModel } from '@angular/cdk/collections';
+import { Component } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+
+export interface PeriodicElement {
+  firstName: string;
+  id: number;
+  lastName: string;
+  loan: number;
+}
+
+const ELEMENT_DATA: PeriodicElement[] = [
+  {id: 1, firstName: 'Hydrogen', lastName: "Ivanov", loan: 12.59333},
+  {id: 2, firstName: 'Helium', lastName: "Todorov", loan: 500000},
+  {id: 3, firstName: 'Lithium', lastName: "Petrov", loan: 15999},
+  {id: 4, firstName: 'Beryllium', lastName: "Georgiev", loan: 1200},
+  {id: 5, firstName: 'Boron', lastName: "Stefanov", loan: 16999},
+  {id: 6, firstName: 'Carbon', lastName: "Milenov", loan: 12345},
+  {id: 7, firstName: 'Nitrogen', lastName: "Topalov", loan: 10000},
+  {id: 8, firstName: 'Oxygen', lastName: "Yordanov", loan: 25000},
+  {id: 9, firstName: 'Fluorine', lastName: "Damianov", loan: 3700},
+  {id: 10, firstName: 'Neon', lastName: "Radkov", loan: 2000},
+];
 
 @Component({
   selector: 'app-list-customers',
   templateUrl: './list-customers.component.html',
   styleUrls: ['./list-customers.component.css']
 })
-export class ListCustomersComponent implements OnInit {
-
-
+export class ListCustomersComponent  {
   
-  empData : Employee[] =[{
-      "Id": 1,
-      "FirstName": "Johannah",
-      "LastName": "Kiffin",
-      "Email": "jkiffin0@google.pl",
-      "Gender": "F",
-      "JobTitle": "Administrative Assistant I"
-    }, {
-      "Id": 2,
-      "FirstName": "Eldin",
-      "LastName": "Astbery",
-      "Email": "eastbery1@geocities.jp",
-      "Gender": "M",
-      "JobTitle": "Senior Editor"
-    }, {
-      "Id": 3,
-      "FirstName": "Nahum",
-      "LastName": "Mounce",
-      "Email": "nmounce2@vk.com",
-      "Gender": "M",
-      "JobTitle": "Programmer II"
-    }, {
-      "Id": 4,
-      "FirstName": "Gallard",
-      "LastName": "Standell",
-      "Email": "gstandell3@europa.eu",
-      "Gender": "M",
-      "JobTitle": "Account Representative II"
-    }, {
-      "Id": 5,
-      "FirstName": "Koenraad",
-      "LastName": "Domleo",
-      "Email": "kdomleo4@cornell.edu",
-      "Gender": "M",
-      "JobTitle": "Quality Control Specialist"
-    }, {
-      "Id": 6,
-      "FirstName": "Uriah",
-      "LastName": "Turbat",
-      "Email": "uturbat5@aol.com",
-      "Gender": "M",
-      "JobTitle": "Accounting Assistant II"
-    }, {
-      "Id": 7,
-      "FirstName": "Waldemar",
-      "LastName": "Fowley",
-      "Email": "wfowley6@sun.com",
-      "Gender": "M",
-      "JobTitle": "Account Coordinator"
-    }, {
-      "Id": 8,
-      "FirstName": "Rodolfo",
-      "LastName": "Trenchard",
-      "Email": "rtrenchard7@yandex.ru",
-      "Gender": "M",
-      "JobTitle": "Data Coordiator"
-    }, {
-      "Id": 9,
-      "FirstName": "Konstance",
-      "LastName": "Dudek",
-      "Email": "kdudek8@techcrunch.com",
-      "Gender": "F",
-      "JobTitle": "Administrative Assistant I"
-    }, {
-      "Id": 10,
-      "FirstName": "Monti",
-      "LastName": "Perton",
-      "Email": "mperton9@youtube.com",
-      "Gender": "M",
-      "JobTitle": "Operator"
-    }];
-  
-    displayedColumns: string[] = ['Id', 'FirstName', 'LastName', 'Email','Gender','JobTitle'];
+  displayedColumns: string[] = ['select', 'id', 'firstName', 'lastName', 'loan'];
+  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  selection = new SelectionModel<PeriodicElement>(true, []);
+   
 
-  constructor() { }
-
-  ngOnInit(): void {
+  isAllSelected() {
+    const numSelected = this.selection.selected.length;
+    const numRows = this.dataSource.data.length;
+    return numSelected === numRows;
   }
   
+  checkboxLabel(row?: PeriodicElement): string {
+    if (!row) {
+      console.log(this.selection.selected);
+      return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
+    }
+    return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.id + 1}`;
+  }
 
 }
