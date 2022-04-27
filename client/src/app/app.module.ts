@@ -21,7 +21,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     FooterComponent,
     SidebarComponent,
     DashboardComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -30,7 +31,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
