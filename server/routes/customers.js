@@ -40,17 +40,30 @@ router.get('/view', function(req, res, next) {
 /* POST customer*/
 router.post('/add', function(req, res, next) {
 
+
+    console.log(req.body);
+
+    let firstName = req.body.firstName;
+    let lastName = req.body.lastName;
+    let emailAddress = req.body.emailAddress;
+    let phoneNumber = req.body.phoneNumber;
+    let dob = req.body.dob;
+    let department = req.body.department;
+
     let customerObj = new customerModel({
 
-        firstName: "Lisa",
-        lastName: "Twain",
-        emailAddress: "gmail@mail.com",
-        phoneNumber: "0879654123",
-        dob: '01-05-2022',
-        department: 'DEP'
+        firstName: firstName,
+        lastName: lastName,
+        emailAddress: emailAddress,
+        phoneNumber: phoneNumber,
+        dob: dob,
+        department: department,
     })
 
+
     customerObj.save(function(err, customerObj) {
+
+        console.log(customerObj);
 
         if (err) {
             res.send({ status: 500, message: 'Unable to create customer' });
@@ -65,17 +78,24 @@ router.post('/add', function(req, res, next) {
 
 /* PUT customer*/
 router.put('/edit', function(req, res, next) {
-    const userId = req.query.userId;
+
+    let userId = req.body.userId;
+    let firstName = req.body.firstName;
+    let lastName = req.body.lastName;
+    let emailAddress = req.body.emailAddress;
+    let phoneNumber = req.body.phoneNumber;
+    let dob = req.body.dob;
+    let department = req.body.department;
 
     let customerObj = {
 
-        firstName: "PALisa",
-        lastName: "Brown",
-        emailAddress: "gmail@mail.com",
-        phoneNumber: "08787887878",
-        dob: '01-05-2022',
-        department: 'DEP'
-    };
+        firstName,
+        lastName,
+        emailAddress,
+        phoneNumber,
+        dob,
+        department,
+    }
 
     customerModel.findByIdAndUpdate(userId, customerObj, function(err, customerRes) {
 
@@ -84,7 +104,7 @@ router.put('/edit', function(req, res, next) {
         if (err) {
             res.send({ status: 500, message: 'Unable to update the customer' });
         } else {
-            res.send({ status: 200, results: customerRes });
+            res.send({ status: 200, results: customerObj });
         }
     })
 });
