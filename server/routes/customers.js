@@ -110,7 +110,11 @@ router.delete('/delete', function(req, res, next) {
 
 /* SEARCH customers*/
 router.get('/search', function(req, res, next) {
-    res.send('respond with a resource');
+
+
+
+
+
 });
 
 module.exports = router;

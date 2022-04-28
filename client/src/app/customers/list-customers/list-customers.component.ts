@@ -32,7 +32,7 @@ export class ListCustomersComponent  {
   displayedColumns: string[] = ['select', 'id', 'firstName', 'lastName', 'loan'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);
-   
+   value: String ="";
 
   isAllSelected() {
     const numSelected = this.selection.selected.length;
