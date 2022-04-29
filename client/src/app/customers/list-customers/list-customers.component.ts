@@ -1,7 +1,9 @@
 import { SelectionModel } from '@angular/cdk/collections';
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { Customer } from 'src/app/models/customer.model';
 import { CustomerService } from 'src/app/services/customer.service';
+
 
 // export interface CustomerElement {
 //   firstName: string;
@@ -12,6 +14,8 @@ import { CustomerService } from 'src/app/services/customer.service';
 //   dob: string;
 //   department: string;
 // }
+
+
 
 // const ELEMENT_DATA: PeriodicElement[] = [
 //   {id: 1, firstName: 'Hydrogen', lastName: "Ivanov", loan: 12.59333},
@@ -35,8 +39,11 @@ export class ListCustomersComponent implements OnInit {
 
   customerResult: any;
   customerList: any;
+
   
   constructor(private customerService: CustomerService){}
+
+
 
   ngOnInit(): void {
     this.getCustomerList();
@@ -52,8 +59,8 @@ export class ListCustomersComponent implements OnInit {
   
   displayedColumns: string[] = ['id', 'firstName', 'lastName', 'emailAddress', 'phoneNumber', 'dob', 'department'];
   dataSource = this.getCustomerList();
-  selection = '';
   value: String ="";
+  selection = new SelectionModel<Customer>(false, []);
 
   isAllSelected() {
     

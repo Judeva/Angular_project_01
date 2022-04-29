@@ -2,6 +2,14 @@ table {
     width: 90%;
 }
 
+.mat-row.hovered {
+    background: #eee;
+}
+
+.mat-row.highlighted {
+    background: #999;
+}
+
 section {
     display: table;
 }

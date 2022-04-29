@@ -5,6 +5,7 @@
     <button mat-raised-button>Add Customer</button>
     <button mat-raised-button>Delete Customer</button>
     <button mat-raised-button>Edit Customer</button>
+    <button mat-raised-button>View Customer</button>
 
 
     <!-- <mat-form-field class="example-form-field" appearance="outline">
@@ -53,7 +54,7 @@
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)" [ngClass]="{hovered: row.hovered, highlighted: selection.isSelected(row)}" (mouseover)="row.hovered = true" (mouseout)="row.hovered = false">
         </tr>
 
     </table>
