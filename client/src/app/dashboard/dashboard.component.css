@@ -1,0 +1,10 @@
+  #dashboard {
+      display: flex;
+      flex-wrap: wrap;
+  }
+  
+  .mat-card {
+      width: 200px;
+      padding: 3%;
+      margin: auto;
+  }

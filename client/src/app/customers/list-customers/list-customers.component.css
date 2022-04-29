@@ -7,7 +7,7 @@ table {
 }
 
 .mat-row.highlighted {
-    background: #999;
+    background: rgb(242, 242, 242);
 }
 
 section {
@@ -20,4 +20,20 @@ section {
 
 .example-form-field {
     width: 350px;
+}
+
+#add-item {
+    background-color: rgb(232, 255, 245);
+}
+
+#edit-item {
+    background-color: rgb(251, 243, 216);
+}
+
+#view-item {
+    background-color: rgb(228, 243, 255);
+}
+
+#delete-item {
+    background-color: rgb(255, 228, 228);
 }

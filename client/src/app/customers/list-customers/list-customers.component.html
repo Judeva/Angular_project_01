@@ -2,10 +2,10 @@
 
 <div id="customer-buttons">
 
-    <button mat-raised-button>Add Customer</button>
-    <button mat-raised-button>Delete Customer</button>
-    <button mat-raised-button>Edit Customer</button>
-    <button mat-raised-button>View Customer</button>
+    <button mat-raised-button id="add-item">Add Customer</button>
+    <button mat-raised-button id="view-item">View Customer</button>
+    <button mat-raised-button id="edit-item">Edit Customer</button>
+    <button mat-raised-button id="delete-item">Delete Customer</button>
 
 
     <!-- <mat-form-field class="example-form-field" appearance="outline">
@@ -19,12 +19,12 @@
 
     <table mat-table class="customers-table mate-elevation-z8" [dataSource]="customerList">
         <ng-container matColumnDef="id">
-            <th mat-header-cell *matHeaderCellDef> # </th>
-            <td mat-cell *matCellDef="let customer"> {{customer.id}} </td>
+            <th mat-header-cell *matHeaderCellDef> Customer ID </th>
+            <td mat-cell *matCellDef="let customer"> {{customer._id}} </td>
         </ng-container>
 
         <ng-container matColumnDef="firstName">
-            <th mat-header-cell *matHeaderCellDef> </th>
+            <th mat-header-cell *matHeaderCellDef> First Name</th>
             <td mat-cell *matCellDef="let customer"> {{customer.firstName}} </td>
         </ng-container>
 

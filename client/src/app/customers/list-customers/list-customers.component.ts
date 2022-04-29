@@ -40,10 +40,7 @@ export class ListCustomersComponent implements OnInit {
   customerResult: any;
   customerList: any;
 
-  
   constructor(private customerService: CustomerService){}
-
-
 
   ngOnInit(): void {
     this.getCustomerList();
@@ -62,16 +59,5 @@ export class ListCustomersComponent implements OnInit {
   value: String ="";
   selection = new SelectionModel<Customer>(false, []);
 
-  isAllSelected() {
-    
-  }
   
-  // checkboxLabel(row?: PeriodicElement): string {
-  //   if (!row) {
-  //     console.log(this.selection.selected);
-  //     return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
-  //   }
-  //   return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.id + 1}`;
-  // }
-
 }
