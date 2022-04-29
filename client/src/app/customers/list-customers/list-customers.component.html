@@ -20,7 +20,7 @@
     <table mat-table class="customers-table mate-elevation-z8" [dataSource]="customerList">
         <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef> Customer ID </th>
-            <td mat-cell *matCellDef="let customer"> {{customer._id}} </td>
+            <td mat-cell *matCellDef="let customer"> <a [routerLink]="['view', customer._id]"> {{customer._id}} </a></td>
         </ng-container>
 
         <ng-container matColumnDef="firstName">

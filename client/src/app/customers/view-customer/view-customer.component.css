@@ -1,0 +1,17 @@
+.customer-card {
+    width: 400px;
+    margin: 1%;
+}
+
+.mat-card-subtitle {
+    padding-top: 1%;
+    color: gray;
+}
+
+.mat-card-title {
+    padding-top: 4%;
+}
+
+.mat-card-subtitle {
+    padding-bottom: 3%;
+}

@@ -5,10 +5,12 @@ import { AddCustomersComponent } from './add-customers/add-customers.component';
 import { EditCustomersComponent } from './edit-customers/edit-customers.component';
 import { ListCustomersComponent } from './list-customers/list-customers.component';
 import { SearchCustomersComponent } from './search-customers/search-customers.component';
+import { ViewCustomerComponent } from './view-customer/view-customer.component';
 
 const routes: Routes = [
   { path: '', component: ListCustomersComponent },
   { path: 'add', component: AddCustomersComponent  },
+  { path: 'view/:id', component: ViewCustomerComponent },
   { path: 'edit/:id', component:EditCustomersComponent },
   { path: 'delete/:id', component: DeleteCustomersComponent },
   { path: 'search', component: SearchCustomersComponent },

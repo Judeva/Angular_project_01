@@ -37,3 +37,8 @@ section {
 #delete-item {
     background-color: rgb(255, 228, 228);
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}

@@ -11,12 +11,15 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
 import { FormsModule } from '@angular/forms';
 
 import { AddCustomersComponent } from './add-customers/add-customers.component';
 import { EditCustomersComponent } from './edit-customers/edit-customers.component';
 import { DeleteCustomersComponent } from './delete-customers/delete-customers.component';
 import { SearchCustomersComponent } from './search-customers/search-customers.component';
+import { ViewCustomerComponent } from './view-customer/view-customer.component';
 
 
 
@@ -28,6 +31,7 @@ import { SearchCustomersComponent } from './search-customers/search-customers.co
     EditCustomersComponent,
     DeleteCustomersComponent,
     SearchCustomersComponent,
+    ViewCustomerComponent,
 
   ],
   imports: [
@@ -40,7 +44,9 @@ import { SearchCustomersComponent } from './search-customers/search-customers.co
     MatCheckboxModule,
     MatInputModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    MatCardModule,
+    MatDividerModule
   ]
 })
 export class CustomersModule { }
