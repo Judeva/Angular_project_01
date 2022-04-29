@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { tap } from 'rxjs';
+import { ICustomer } from 'src/app/interface/Customer';
+import { Customer } from 'src/app/models/customer.model';
+import { CustomerService } from 'src/app/services/customer.service';
+
 
 @Component({
   selector: 'app-view-customer',
@@ -9,13 +14,16 @@ import { ActivatedRoute } from '@angular/router';
 export class ViewCustomerComponent implements OnInit {
 
   customerId: string='';
-  constructor(private activatedRoute: ActivatedRoute) { }
+  customer!:  any;
+  constructor(private activatedRoute: ActivatedRoute, private customerService: CustomerService) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(data=>{
         this.customerId=data['id'];
-      
-    })
+    });
+    
+    this.customerService.viewCustomer(this.customerId)
+    .subscribe(data=>{this.customer=data as ICustomer; console.log(data); console.log(this.customer)});
   }
 
 }

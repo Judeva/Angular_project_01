@@ -1,23 +1,31 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment.dev';
+import { Customer } from '../models/customer.model';
+import { ICustomer } from '../interface/Customer';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CustomerService {
 
+  customer:any;
   constructor(private httpClient: HttpClient) { }
 
+  
   getCustomers(){
 
-    let url=environment.CUSTOMERS_BASE_URL+environment.CUSTOMER.GET_ALL_CUSTOMERS;
+    let url = environment.CUSTOMERS_BASE_URL+environment.CUSTOMER.GET_ALL_CUSTOMERS;
     return this.httpClient.get(url);
   }
 
-  // viewCustomer(id){
+  viewCustomer(id: string){
+    let url = environment.CUSTOMERS_BASE_URL+environment.CUSTOMER.GET_CUSTOMER+id;
 
-  // }
+    console.log(this.httpClient.get<ICustomer>(url))
+    return this.httpClient.get<ICustomer>(url);
+  }
 
   // editCustomer(id, customerObj){
 

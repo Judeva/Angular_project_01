@@ -20,9 +20,11 @@ router.get('/list', function(req, res, next) {
 });
 
 /* GET ONE customer. */
-router.get('/view', function(req, res, next) {
+router.get('/view/:userId', function(req, res, next) {
 
-    const userId = req.query.userId;
+    console.log(req.params);
+
+    const userId = req.params.userId;
 
     customerModel.findById(userId, function(err, customerRes) {
 
@@ -31,6 +33,7 @@ router.get('/view', function(req, res, next) {
         if (err) {
             res.send({ status: 500, message: 'Unable to find the customer' });
         } else {
+            console.log('expected object' + customerRes)
             res.send({ status: 200, results: customerRes });
         }
     })

@@ -5,10 +5,10 @@ export const environment = {
 
     CUSTOMER: {
         GET_ALL_CUSTOMERS: 'list',
-        GET_CUSTOMER:'view',
-        EDIT_CUSTOMER:'edit',
-        DELETE_CUSTOMER:'delete',
-        SEARCH_CUSTOMER:'view',
+        GET_CUSTOMER:'view/',
+        EDIT_CUSTOMER:'edit/',
+        DELETE_CUSTOMER:'delete/',
+        SEARCH_CUSTOMER:'search',
     },
     LOAN: {
         GET_ALL_LOANS: 'list',
