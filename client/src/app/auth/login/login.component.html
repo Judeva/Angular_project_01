@@ -1,1 +1,29 @@
-<p>login works!</p>
+<mat-card class="example-card">
+    <mat-card-title>LOGIN</mat-card-title>
+    <mat-card-subtitle>Enter valid password and username.</mat-card-subtitle>
+
+    <mat-card-content>
+        <mat-form-field appearance="outline">
+            <mat-label>Enter email address</mat-label>
+            <input matInput placeholder="example@email.com">
+            <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+    </mat-card-content>
+
+    <mat-card-content>
+        <mat-form-field appearance="outline">
+            <mat-label>Enter password</mat-label>
+            <input matInput placeholder="Password">
+            <mat-icon matSuffix>password</mat-icon>
+        </mat-form-field>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button mat-button id='submit'>Login</button>
+    </mat-card-actions>
+
+    <p>New Here? <a routerLink="register">Create new account!</a></p>
+    <p>Forgot password? <a routerLink='404'>Reset password!</a></p>
+
+
+</mat-card>

@@ -23,7 +23,10 @@ import{HttpClientModule} from '@angular/common/http';
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSelectModule } from '@angular/material/select';
-import { MatOptionModule } from '@angular/material/core';
+import { ErrorStateMatcher, MatOptionModule, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
+import { LoginComponent } from './auth/login/login.component';
+import { LogoutComponent } from './auth/logout/logout.component';
+import { NewUserComponent } from './auth/new-user/new-user.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { MatOptionModule } from '@angular/material/core';
     SidebarComponent,
     DashboardComponent,
     PageNotFoundComponent,
+    LoginComponent,
+    LogoutComponent,
+    NewUserComponent
    
   ],
   imports: [
