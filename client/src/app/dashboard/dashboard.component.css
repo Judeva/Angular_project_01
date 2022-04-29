@@ -20,9 +20,14 @@
       margin-bottom: 50px;
   }
   
-  ul {
+  h2,
+  h1 {
       width: 40%;
-      margin: auto;
-      text-align: center;
-      list-style: circle;
+      text-align: justify;
+      margin-left: 15px;
+  }
+  
+  mat-divider {
+      width: 40%;
+      margin-left: 15px;
   }

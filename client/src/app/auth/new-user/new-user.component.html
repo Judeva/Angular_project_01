@@ -22,10 +22,15 @@
     <mat-card-content>
         <mat-form-field appearance="outline">
             <mat-label>Select username</mat-label>
-            <input matInput placeholder="Username">
+            <input formControlName="username" matInput placeholder="Username">
             <mat-icon matSuffix>person</mat-icon>
         </mat-form-field>
     </mat-card-content>
+
+    <ng-container *ngIf="registerFormGroup.controls['username'].touched && registerFormGroup.controls['username'].invalid">
+        <p class="error-message" *ngIf="registerFormGroup.controls['username'].errors?.['required']">Please, enter an username.</p>
+        <p class=" error-message " *ngIf="registerFormGroup.controls['username'].errors?.['minlength']">Username should be at least 5 symbols.</p>
+    </ng-container>
 
     <mat-card-content>
         <mat-form-field appearance="outline">

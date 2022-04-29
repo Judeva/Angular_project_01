@@ -22,7 +22,7 @@ export class NewUserComponent implements OnInit {
       Validators.required,
       Validators.minLength(5),
     ]),
-    passwords: new FormGroup({
+      passwords: new FormGroup({
       password: new FormControl(null, [Validators.required, Validators.minLength(5)]),
       rePassword: new FormControl(null, [Validators.required, Validators.minLength(5)]),
     }),
