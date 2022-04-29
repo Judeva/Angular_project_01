@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -7,7 +7,7 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
-import { emailValidator } from '../util';
+import { emailValidator, passwordMatch } from '../util';
 
 @Component({
   selector: 'app-new-user',
@@ -15,17 +15,19 @@ import { emailValidator } from '../util';
   styleUrls: ['./new-user.component.css'],
 })
 export class NewUserComponent implements OnInit {
+
+  get passwordsGroup(): FormGroup {
+    return this.registerFormGroup.controls['passwords'] as FormGroup;
+  }
+
   registerFormGroup: FormGroup = this.formBuilder.group({
-    username: new FormControl('', [Validators.required, Validators.minLength(5)]),
-    email: new FormControl('', [Validators.required, emailValidator]),
-    password: new FormControl('', [
+    username: new FormControl('', [
       Validators.required,
       Validators.minLength(5),
     ]),
-      passwords: new FormGroup({
-      password: new FormControl(null, [Validators.required, Validators.minLength(5)]),
-      rePassword: new FormControl(null, [Validators.required, Validators.minLength(5)]),
-    }),
+    email: new FormControl('', [Validators.required, emailValidator]),
+    password: new FormControl('', [Validators.required,Validators.minLength(5),]),
+    rePassword: new FormControl('', [Validators.required,Validators.minLength(5),]),
   });
 
   constructor(
@@ -38,7 +40,7 @@ export class NewUserComponent implements OnInit {
 
   handleRegister(): void {
     console.log(this.registerFormGroup);
-    this.userService.login();
+    this.userService.register();
     this.router.navigate(['/dashboard']);
   }
 }
