@@ -14,6 +14,8 @@ import {MatListModule} from '@angular/material/list';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
+import{HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +34,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatToolbarModule,
     MatIconModule,
     MatListModule,
+    HttpClientModule
 
   ],
   providers: [],

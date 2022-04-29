@@ -1,8 +1,9 @@
 export const environment = {
     production: false,
     BASE_URL: 'http://localhost:3000',
+    CUSTOMERS_BASE_URL:'http://localhost:3000/customers/',
 
-    CUSTOMER_BASE_URL: {
+    CUSTOMER: {
         GET_ALL_CUSTOMERS: 'list',
         GET_CUSTOMER:'view',
         EDIT_CUSTOMER:'edit',

@@ -5,10 +5,10 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
 
+var cors = require("cors");
+
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/LoansManager');
-
-
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -20,6 +20,7 @@ var auditRouter = require('./routes/audit');
 var loansRouter = require('./routes/loans');
 
 var app = express();
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
