@@ -3,14 +3,18 @@
       <mat-icon id="home" ><a routerLink ='dashboard'>home</a></mat-icon>
     </button>
     <span id="title-logo">Loans Manager</span>
+
     <span class="example-spacer"></span>
-    <button mat-icon-button class="header-icon favorite-icon" aria-label="profile icon">
+
+    <button mat-icon-button class="header-icon favorite-icon" aria-label="profile icon" *ngIf="!isLoggedIn">
       <mat-icon><a routerLink ='register'>person</a></mat-icon>
     </button>
-    <button mat-icon-button class="header-icon" aria-label="logout icon">
+
+    <button mat-icon-button class="header-icon" aria-label="logout icon" *ngIf="isLoggedIn">
       <mat-icon><a routerLink ='logout'>power_settings_new</a></mat-icon>
     </button>
-    <button mat-icon-button class="header-icon" aria-label="login icon">
+
+    <button mat-icon-button class="header-icon" aria-label="login icon" *ngIf="!isLoggedIn">
         <mat-icon><a routerLink ='login'>login</a></mat-icon>
     </button>
 
