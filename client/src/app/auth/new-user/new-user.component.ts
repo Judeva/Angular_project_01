@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewUserComponent implements OnInit {
 
+  title = 'Tic Tac Toe';
+  public isAuthenticated = false;
   constructor() { }
 
   ngOnInit(): void {

@@ -9,3 +9,8 @@
 .mat-toolbar.mat-primary {
     background: #2551a1;
 }
+
+a {
+    text-decoration: none !important;
+    color: white;
+}

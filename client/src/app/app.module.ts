@@ -15,8 +15,15 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatTableModule } from '@angular/material/table';
 import{HttpClientModule} from '@angular/common/http';
+
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSelectModule } from '@angular/material/select';
+import { MatOptionModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -38,7 +45,19 @@ import{HttpClientModule} from '@angular/common/http';
     MatListModule,
     HttpClientModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    MatToolbarModule,
+    MatInputModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    MatTableModule,
+    MatSlideToggleModule,
+    MatSelectModule,
+    MatOptionModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

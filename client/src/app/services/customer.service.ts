@@ -27,9 +27,14 @@ export class CustomerService {
     return this.httpClient.get<ICustomer>(url);
   }
 
-  // editCustomer(id, customerObj){
+  editCustomer(id: string, customerObj: ICustomer){
 
-  // }
+
+
+    let url = environment.CUSTOMERS_BASE_URL+environment.CUSTOMER.EDIT_CUSTOMER+id;
+    return this.httpClient.put<ICustomer>(url, customerObj);
+
+  }
 
   // deleteCustomer(id){
 
