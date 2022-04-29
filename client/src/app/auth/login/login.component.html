@@ -1,29 +1,47 @@
-<mat-card class="example-card">
-    <mat-card-title>LOGIN</mat-card-title>
-    <mat-card-subtitle>Enter valid password and username.</mat-card-subtitle>
+<form class="login" [formGroup]="loginFormGroup" (ngSubmit)="handleLogin()">
+    <mat-card class="example-card">
+        <mat-card-title>LOGIN</mat-card-title>
+        <mat-card-subtitle>Enter valid password and username.</mat-card-subtitle>
 
-    <mat-card-content>
-        <mat-form-field appearance="outline">
-            <mat-label>Enter email address</mat-label>
-            <input matInput placeholder="example@email.com">
-            <mat-icon matSuffix>email</mat-icon>
-        </mat-form-field>
-    </mat-card-content>
+        <mat-card-content>
+            <mat-form-field appearance="outline">
+                <mat-label>Enter email address</mat-label>
+                <input type="email" formControlName="email" matInput placeholder="example@email.com">
+                <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
 
-    <mat-card-content>
-        <mat-form-field appearance="outline">
-            <mat-label>Enter password</mat-label>
-            <input matInput placeholder="Password">
-            <mat-icon matSuffix>password</mat-icon>
-        </mat-form-field>
-    </mat-card-content>
+            <ng-container *ngIf="loginFormGroup.controls['email'].touched && loginFormGroup.controls['email'].invalid">
+                <p class="error-message" *ngIf="loginFormGroup.controls['email'].errors?.['required']">
+                    Please, enter an email.</p>
 
-    <mat-card-actions>
-        <button mat-button id='submit'>Login</button>
-    </mat-card-actions>
+                <p class="error-message" *ngIf="loginFormGroup.controls['email'].errors?.['email']">
+                    Please, enter a valid email.</p>
 
-    <p>New Here? <a routerLink="/register">Create new account!</a></p>
-    <p>Forgot password? <a routerLink='/'>Reset password!</a></p>
+            </ng-container>
+        </mat-card-content>
+
+        <mat-card-content>
+            <mat-form-field appearance="outline">
+                <mat-label>Enter password</mat-label>
+                <input type="password" formControlName="password" matInput placeholder="Password">
+                <mat-icon matSuffix>password</mat-icon>
+            </mat-form-field>
+
+            <ng-container *ngIf="loginFormGroup.controls['password'].touched && loginFormGroup.controls['password'].invalid">
+                <p class="error-message" *ngIf="loginFormGroup.controls['password'].errors?.['required']">Please, enter a password.</p>
+                <p class=" error-message " *ngIf="loginFormGroup.controls['password'].errors?.['minlength']">Please, enter at least 8 symbols.</p>
+            </ng-container>
+
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-button id='submit' [disabled]="loginFormGroup.invalid">Login</button>
+        </mat-card-actions>
+
+        <p>New Here? <a routerLink="/register ">Create new account!</a></p>
+        <p>Forgot password? <a routerLink='/'>Reset password!</a></p>
 
 
-</mat-card>
+    </mat-card>
+
+</form>

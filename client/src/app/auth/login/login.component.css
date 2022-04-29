@@ -22,3 +22,7 @@ a {
     background-color: rgb(130, 121, 250);
     color: white;
 }
+
+.error-message {
+    color: red;
+}

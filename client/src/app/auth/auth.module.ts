@@ -11,7 +11,7 @@ import { MatListModule } from '@angular/material/list';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
@@ -57,7 +57,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatSelectModule,
     MatOptionModule,
     FlexLayoutModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+
   ]
 })
 export class AuthModule { }

@@ -15,7 +15,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
@@ -63,6 +63,7 @@ import { NewUserComponent } from './auth/new-user/new-user.component';
     MatSlideToggleModule,
     MatSelectModule,
     MatOptionModule,
+    ReactiveFormsModule
 
   ],
   providers: [],
