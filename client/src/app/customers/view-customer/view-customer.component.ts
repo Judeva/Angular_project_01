@@ -14,7 +14,7 @@ import { CustomerService } from 'src/app/services/customer.service';
 export class ViewCustomerComponent implements OnInit {
 
   customerId: string='';
-  customer!:  any;
+  customer:  any;
   constructor(private activatedRoute: ActivatedRoute, private customerService: CustomerService) { }
 
   ngOnInit(): void {
@@ -22,8 +22,13 @@ export class ViewCustomerComponent implements OnInit {
         this.customerId=data['id'];
     });
     
-    this.customerService.viewCustomer(this.customerId)
-    .subscribe(data=>{this.customer=data as ICustomer; console.log(data); console.log(this.customer)});
+    this.customer=this.customerService.viewCustomer(this.customerId)
+    .subscribe(data=>{
+      this.customer=data['results'];  
+      console.log(data); 
+      console.log(this.customer)
+    });
   }
+
 
 }
