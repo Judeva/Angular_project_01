@@ -15,7 +15,6 @@ import { emailValidator, passwordMatch } from '../util';
   styleUrls: ['./new-user.component.css'],
 })
 export class NewUserComponent implements OnInit {
-
   get passwordsGroup(): FormGroup {
     return this.registerFormGroup.controls['passwords'] as FormGroup;
   }
@@ -26,8 +25,14 @@ export class NewUserComponent implements OnInit {
       Validators.minLength(5),
     ]),
     email: new FormControl('', [Validators.required, emailValidator]),
-    password: new FormControl('', [Validators.required,Validators.minLength(5),]),
-    rePassword: new FormControl('', [Validators.required,Validators.minLength(5),]),
+    password: new FormControl('', [
+      Validators.required,
+      Validators.minLength(5),
+    ]),
+    rePassword: new FormControl('', [
+      Validators.required,
+      Validators.minLength(5),
+    ]),
   });
 
   constructor(
@@ -39,7 +44,21 @@ export class NewUserComponent implements OnInit {
   ngOnInit(): void {}
 
   handleRegister(): void {
-    console.log(this.registerFormGroup);
+    if (
+      this.registerFormGroup.value.password !==
+      this.registerFormGroup.value.rePassword
+    ) {
+      alert('Passwords doesnt match!');
+      this.router.navigate(['/register']);
+    }
+    console.log(this.registerFormGroup.value);
+
+    const body = {
+      username: this.registerFormGroup.value.username,
+      email: this.registerFormGroup.value.email,
+      password: this.registerFormGroup.value.password,
+    };
+
     this.userService.register();
     this.router.navigate(['/dashboard']);
   }

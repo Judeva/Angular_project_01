@@ -79,16 +79,20 @@ router.post('/add', function(req, res, next) {
 
 });
 
-/* PUT customer*/
-router.put('/edit', function(req, res, next) {
+/* PATCH customer*/
+router.patch('/edit/:userId', function(req, res, next) {
+
+    console.log(req.params.userId + "   params id"); //ok
+    console.log(req.params.dob + "   params ");
 
     let userId = req.body.userId;
     let firstName = req.body.firstName;
     let lastName = req.body.lastName;
     let emailAddress = req.body.emailAddress;
     let phoneNumber = req.body.phoneNumber;
-    let dob = req.body.dob;
     let department = req.body.department;
+
+    console.log(id + "Hello from PUT servis in the beckend")
 
     let customerObj = {
 
@@ -96,7 +100,6 @@ router.put('/edit', function(req, res, next) {
         lastName,
         emailAddress,
         phoneNumber,
-        dob,
         department,
     }
 
@@ -107,6 +110,7 @@ router.put('/edit', function(req, res, next) {
         if (err) {
             res.send({ status: 500, message: 'Unable to update the customer' });
         } else {
+            console.log("Hi!")
             res.send({ status: 200, results: customerObj });
         }
     })

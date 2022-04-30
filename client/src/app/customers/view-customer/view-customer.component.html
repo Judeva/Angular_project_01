@@ -25,7 +25,7 @@
     </mat-card-content>
 
     <mat-card-actions>
-        <button mat-button>EDIT</button>
+        <button mat-button><a [routerLink]="['/customers/edit', customer._id]">EDIT</a></button>
         <button mat-button>DELETE</button>
     </mat-card-actions>
 </mat-card>

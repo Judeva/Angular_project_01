@@ -29,10 +29,9 @@ export class CustomerService {
 
   editCustomer(id: string, customerObj: ICustomer){
 
-
-
+    console.log(customerObj.emailAddress + "hi customer obj")
     let url = environment.CUSTOMERS_BASE_URL+environment.CUSTOMER.EDIT_CUSTOMER+id;
-    return this.httpClient.put<ICustomer>(url, customerObj);
+    return this.httpClient.patch<ICustomer>(url, customerObj);
 
   }
 

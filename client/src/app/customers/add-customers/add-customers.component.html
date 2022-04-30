@@ -1,1 +1,52 @@
-<p>add-customers works!</p>
+<form class="add-edt" (ngSubmit)="handleAdd()">
+
+    <mat-card class="example-card">
+        <mat-card-title>ADD NEW CUSTOMER</mat-card-title>
+        <mat-card-subtitle>Add customer details below</mat-card-subtitle>
+
+        <mat-card-content>
+            <mat-form-field appearance="outline">
+                <mat-label>First Name</mat-label>
+                <input matInput placeholder="First Name">
+            </mat-form-field>
+        </mat-card-content>
+
+        <mat-card-content>
+            <mat-form-field appearance="outline">
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Last Name">
+            </mat-form-field>
+        </mat-card-content>
+
+
+
+        <mat-card-content>
+            <mat-form-field appearance="outline">
+                <mat-label>Email address</mat-label>
+                <input type="email" matInput placeholder="example@email.com">
+            </mat-form-field>
+        </mat-card-content>
+
+
+
+        <mat-card-content>
+            <mat-form-field appearance="outline">
+                <mat-label>Phone Number</mat-label>
+                <input matInput placeholder="Phone number">
+            </mat-form-field>
+        </mat-card-content>
+
+
+
+        <mat-card-content>
+            <mat-form-field appearance="outline">
+                <mat-label>Department</mat-label>
+                <input matInput placeholder="Department">
+            </mat-form-field>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-button id='submit'>Submit</button>
+        </mat-card-actions>
+    </mat-card>
+</form>

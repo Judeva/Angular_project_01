@@ -1,1 +1,57 @@
+<form class="edit" [formGroup]="editFormGroup" (ngSubmit)="handleEdit()">
 
+    <mat-card class="example-card">
+        <mat-card-title>EDIT</mat-card-title>
+        <mat-card-subtitle>Edit customer details</mat-card-subtitle>
+
+        <mat-card-content>
+            <mat-form-field appearance="outline">
+                <mat-label>First Name</mat-label>
+                <input matInput placeholder="First Name" formControlName="firstName" value="{{customer.firstName}}">
+            </mat-form-field>
+        </mat-card-content>
+
+        <mat-card-content>
+            <mat-form-field appearance="outline">
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Last Name" formControlName="lastName" value="{{customer.lastName}}">
+            </mat-form-field>
+        </mat-card-content>
+
+
+
+        <mat-card-content>
+            <mat-form-field appearance="outline">
+                <mat-label>Email address</mat-label>
+                <input type="email" matInput placeholder="example@email.com" formControlName="emailAddress" value="{{customer.emailAddress}}">
+            </mat-form-field>
+        </mat-card-content>
+
+
+
+        <mat-card-content>
+            <mat-form-field appearance="outline">
+                <mat-label>Phone Number</mat-label>
+                <input matInput placeholder="Phone number" formControlName="phoneNumber" value="{{customer.phoneNumber}}">
+            </mat-form-field>
+        </mat-card-content>
+
+        <mat-card-content>
+            <mat-form-field appearance="outline">
+                <mat-label>Date of creation</mat-label>
+                <input matInput placeholder="Department" formControlName="dob" value="{{customer.dob}}">
+            </mat-form-field>
+        </mat-card-content>
+
+        <mat-card-content>
+            <mat-form-field appearance="outline">
+                <mat-label>Department</mat-label>
+                <input matInput placeholder="Department" formControlName="department" value="{{customer.department}}">
+            </mat-form-field>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-button id='submit'>Submit</button>
+        </mat-card-actions>
+    </mat-card>
+</form>

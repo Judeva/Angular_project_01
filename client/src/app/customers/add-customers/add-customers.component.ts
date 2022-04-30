@@ -12,4 +12,8 @@ export class AddCustomersComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  handleAdd(){
+    
+  }
+
 }

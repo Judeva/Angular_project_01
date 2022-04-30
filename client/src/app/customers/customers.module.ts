@@ -13,7 +13,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 
 import { AddCustomersComponent } from './add-customers/add-customers.component';
 import { EditCustomersComponent } from './edit-customers/edit-customers.component';
@@ -73,6 +73,7 @@ import { MatOptionModule } from '@angular/material/core';
     MatSlideToggleModule,
     MatSelectModule,
     MatOptionModule,
+    ReactiveFormsModule
   ]
 })
 export class CustomersModule { }

@@ -23,7 +23,8 @@ section {
 }
 
 #add-item {
-    background-color: rgb(232, 255, 245);
+    background-color: rgb(235, 235, 235);
+    margin-bottom: 20px;
 }
 
 #edit-item {
