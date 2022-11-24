@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\client",
+    "\\client\\src",
+    "\\client\\src\\app",
+    "\\client\\src\\app\\customers",
+    "\\client\\src\\app\\customers\\edit-customers",
+    "\\client\\src\\environments",
+    "\\server"
+  ],
+  "SelectedNode": "\\client\\src\\app\\customers\\edit-customers\\edit-customers.component.ts",
+  "PreviewInSolutionExplorer": false
+}

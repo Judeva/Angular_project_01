@@ -3,12 +3,12 @@
     <mat-card-subtitle>Personal information about the customer:</mat-card-subtitle>
 
     <mat-card-content>
-        <p>First Name: <i>{{customer.firstName}}</i></p>
-        <p>Last Name: <i>{{customer.lastName}}</i></p>
-        <p>Phone Number: <i>{{customer.phoneNumber}}</i></p>
-        <p>Email Address: <i>{{customer.emailAddress}}</i></p>
-        <p>Department: <i>{{customer.department}}</i></p>
-        <p>Date of creation: <i>{{customer.dob}}</i></p>
+        <p>First Name: <span>{{customer.firstName}}</span></p>
+        <p>Last Name: <span>{{customer.lastName}}</span></p>
+        <p>Phone Number: <span>{{customer.phoneNumber}}</span></p>
+        <p>Email Address: <span>{{customer.emailAddress}}</span></p>
+        <p>Department: <span>{{customer.department}}</span></p>
+        <p>Date of creation: <span>{{customer.dob}}</span></p>
 
         <mat-divider></mat-divider>
     </mat-card-content>
@@ -18,14 +18,14 @@
 
 
     <mat-card-content>
-        <p>Loans: <i>130000</i> </p>
-        <p>Payments: <i>12-04-2022</i></p>
-        <p>Status: <i>Active</i></p>
+        <p>Loans: <span>130000</span> </p>
+        <p>Payments: <span>12-04-2022</span></p>
+        <p>Status: <span>Active</span></p>
 
     </mat-card-content>
 
     <mat-card-actions>
-        <button mat-button><a [routerLink]="['/customers/edit', customer._id]">EDIT</a></button>
-        <button mat-button>DELETE</button>
+        <button mat-button><a [routerLink]="['/customers/edit', customerId]">EDIT</a></button>
+        <button mat-button><a [routerLink]="['/customers/delete', customerId]"></a>DELETE</button>
     </mat-card-actions>
 </mat-card>

@@ -10,6 +10,7 @@
 
 .mat-card-title {
     padding-top: 4%;
+    color: rgb(19, 84, 204);
 }
 
 .mat-card-subtitle {
@@ -18,4 +19,9 @@
 
 .mat-button {
     background-color: rgb(236, 236, 236);
+}
+
+.mat-card-content span {
+    color: rgb(19, 84, 204);
+    font-size: medium;
 }
